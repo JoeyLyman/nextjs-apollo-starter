@@ -59,7 +59,8 @@ function LoginForm(props) {
       handleLogin(token);
     },
     onError(err) {
-      console.log(`err object:`, err.graphQLErrors[0]);
+      console.log(`err:`, err);
+      console.log(`err.graphQLErrors[0]:`, err.graphQLErrors[0]);
       setErrors({ graphql: err.graphQLErrors[0].message });
     },
     variables: {

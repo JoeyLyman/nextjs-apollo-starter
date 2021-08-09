@@ -1,6 +1,4 @@
 require("dotenv").config();
-const withCSS = require("@zeit/next-css");
-const withSass = require("@zeit/next-sass");
 
 module.exports = {
   // enableSvg: true,
@@ -22,6 +20,6 @@ module.exports = {
     return config;
   },
   env: {
-    SERVER_URI: process.env.SERVER_URI || "http://localhost:5000",
+    SERVER_URI: process.env.SERVER_URI || "http://localhost:4000",
   },
 };

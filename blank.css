@@ -1,0 +1,5 @@
+/* https://github.com/vercel/next.js/issues/5264 */
+
+/* This is probably the same bug as here: #5203
+Can be worked around by importing an empty css file from _app.js
+It's caused by the chunks having a deferred module dependency on the style chunk, but the style chunk is never loaded, so the new chunk never executes. If you depend on a css file from the _app.js file, then the style chunk will always be available and the new route executes once it's loaded. */
